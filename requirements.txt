@@ -1,0 +1,10 @@
+beautifulsoup4==4.14.3
+matplotlib==3.10.8
+pandas==2.3.3
+podman==5.6.0
+requests==2.32.5
+tqdm==4.67.1
+urllib3==2.6.3
+numpy==2.4.3
+tabulate==0.10.0
+

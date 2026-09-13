@@ -1,0 +1,11 @@
+BEGIN EXCLUSIVE;
+
+CREATE TABLE sbom_raw (
+    sbom_id INTEGER PRIMARY KEY REFERENCES sboms(id) ON DELETE CASCADE,
+    raw TEXT NOT NULL
+) STRICT;
+
+INSERT INTO sbom_raw(sbom_id, raw) SELECT id, raw FROM sboms;
+ALTER TABLE sboms DROP COLUMN raw;
+
+COMMIT;
